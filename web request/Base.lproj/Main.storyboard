@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="web_request" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-ja-jxP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="549"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2h-wQ-sbF">
+                                <rect key="frame" x="277" y="557" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4s2-KI-kEm"/>
+                                    <constraint firstAttribute="width" constant="46" id="Qch-9d-UoZ"/>
+                                </constraints>
+                                <state key="normal" title="Dogs"/>
+                                <connections>
+                                    <action selector="loadDogs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTg-nF-qVa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWM-Gc-Q9e">
+                                <rect key="frame" x="534" y="557" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NMC-v8-E9l"/>
+                                    <constraint firstAttribute="width" constant="46" id="aqb-h4-CXT"/>
+                                </constraints>
+                                <state key="normal" title="Birds"/>
+                                <connections>
+                                    <action selector="loadBirds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qar-mJ-mpf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jde-7L-PWI">
+                                <rect key="frame" x="20" y="557" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GKb-AX-h2q"/>
+                                    <constraint firstAttribute="width" constant="46" id="ycL-cG-smq"/>
+                                </constraints>
+                                <state key="normal" title="Cats"/>
+                                <connections>
+                                    <action selector="loadCats:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOB-K1-P6d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ppz-ja-jxP" secondAttribute="trailing" id="69Y-XU-Q9I"/>
+                            <constraint firstItem="r2h-wQ-sbF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6tx-8b-eIc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r2h-wQ-sbF" secondAttribute="bottom" constant="13" id="8iN-Zl-jB5"/>
+                            <constraint firstItem="kWM-Gc-Q9e" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FsT-zP-xsO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kWM-Gc-Q9e" secondAttribute="bottom" constant="13" id="OZ9-2B-hoA"/>
+                            <constraint firstItem="Ppz-ja-jxP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="STb-nM-bM2"/>
+                            <constraint firstItem="Jde-7L-PWI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pmR-F0-lOa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jde-7L-PWI" secondAttribute="bottom" constant="13" id="teQ-eY-3Rf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ppz-ja-jxP" secondAttribute="bottom" constant="51" id="uW4-wv-goj"/>
+                            <constraint firstItem="Ppz-ja-jxP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wbP-Cj-SfT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="Ppz-ja-jxP" id="M7A-Fu-2Mf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="418"/>
+        </scene>
+    </scenes>
+</document>
